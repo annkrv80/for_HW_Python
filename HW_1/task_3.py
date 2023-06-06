@@ -10,6 +10,8 @@ print('Привет! Отгадай число от 0 до 1000 с 10 попыт
 while count > 0:
     print ('Попытка № ' + str(count))
     count -= 1
+
+
     n = int(input('Введи число: '))
     if n == num:
         print('Ура! Вы выиграли!!!')
@@ -18,6 +20,8 @@ while count > 0:
         print('Больше')
     elif n > num:
         print('Меньше')
+
+        
 else:
     print('Исчерпаны все попытки! Повезет в следующий раз!')
     print('Было загадано число ' + str(num))
