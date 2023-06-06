@@ -12,7 +12,7 @@ if n >= 0 and n <= 100000:
         if n % i == 0:
             count +=1
 
-    if count <= 2:
+    if count == 2:
         print('Число ',n,'простое')   
     else:
         print('Число', n , 'составное')
