@@ -5,19 +5,15 @@ import fractions
 x = '1/3'
 y = '1/2'
 
-for i in x:
-    for j in y:
-        a = int(x[0])
-        b = int(x[2])
-        c = int(y[0])
-        d = int(y[2])
+a, b = map(int, x.split('/'))
+c, d = map(int, y.split('/'))
 
 
 print(f'Сумма = {a * d + b * c}/{b * d}')
 print(f'Произведение = {a * c}/{b * d}')
 
 
-f1 = fractions.Fraction(1, 3)
-f2 = fractions.Fraction(1, 2)
+f1 = fractions.Fraction(a, b)
+f2 = fractions.Fraction(c, d)
 print(f1 + f2)
 print(f1 * f2)
