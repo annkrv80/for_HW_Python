@@ -10,6 +10,7 @@
 
 deposit_amount = 0
 count = 0
+flag = True
 SUM_IS_A_MULTIPLE_OF = 50
 PERCENT_FOR_WITHDRAWAL = 1.5
 MIN_WITHDRAWAL_FEE = 30
@@ -18,7 +19,8 @@ PERCENT_ACCRUAL = 3
 LIMIT_AMOUNT = 5_000_000
 TAX = 10
 
-while True:
+
+while flag:
     if count % 3 == 0:
         deposit_amount = deposit_amount + deposit_amount * PERCENT_ACCRUAL / 100
         print(f'Сумма вклада {deposit_amount}')
@@ -54,4 +56,5 @@ while True:
             print(f'Недостаточно средств. Сумма вклада {deposit_amount}')
     if action == 3:
         print(f'Сумма вклада {deposit_amount}')
-        exit()
+        flag = False
+        
