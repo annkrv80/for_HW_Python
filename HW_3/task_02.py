@@ -39,8 +39,8 @@ text = """
 
 """
 
-text = text.replace('.', '').replace(',', '').replace(
-    '!', '').replace('–', '').replace('?', '').lower().split()
+text = text.replace('.', '').replace(',', '').replace('!', '').replace('–', '').replace('?', '')\
+.lower().split()
 
 my_dict = {}
 
