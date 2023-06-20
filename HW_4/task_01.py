@@ -16,7 +16,7 @@ def print_matrix(matrix: list):
         print(matrix[i])
 
 
-mat = [[10, 20, 15, 35], [4, 5, 25, 33], [7, 8, 88, 77]]
+mat = [[10, 20, 30, 40 ], [11, 12, 13, 14], [22, 33, 44, 55]]
 
 print('Исходная матрица')
 print_matrix(mat)
