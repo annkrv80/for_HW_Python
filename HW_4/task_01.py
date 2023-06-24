@@ -10,17 +10,17 @@ def transport_matrix(matrix: list):
             result[j][i] = matrix[i][j]
     return result
 
-
-def print_matrix(matrix: list):
-    for i in range(len(matrix)):
-        print(matrix[i])
-
+def trasport_mat(matrix: list):
+    return [list(i) for i in zip(*matrix)]
 
 mat = [[10, 20, 30, 40 ], [11, 12, 13, 14], [22, 33, 44, 55]]
 
 print('Исходная матрица')
-print_matrix(mat)
+print(*mat, sep='\n')
 
 mat_t = transport_matrix(mat)
 print('Транспорированная матрица')
-print_matrix(mat_t)
+print(*mat_t, sep='\n')
+
+mat_t_2 = trasport_mat(mat)
+print(*mat_t_2, sep='\n')
