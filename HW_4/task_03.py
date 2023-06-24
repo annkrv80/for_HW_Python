@@ -29,8 +29,6 @@ def depositing_money(deposit):
         return deposit
 
 
-
-
 def removal_of_money(deposit):
     sum = int(input('Введите сумму: '))
     withdrawai_fee = Decimal(sum / 100 * PERCENT_FOR_WITHDRAWAL)
@@ -56,8 +54,6 @@ def removal_of_money(deposit):
         return deposit
 
 
-
-
 def accrual_of_interest(deposit):
     deposit = Decimal(deposit + deposit * PERCENT_ACCRUAL / 100)
     operations_information_write(f'Accrued interest {deposit * PERCENT_ACCRUAL / 100} rub\n')
@@ -71,13 +67,9 @@ def payment_of_taxes(deposit):
     return deposit
 
 
-
-
 def account_information_write(deposit):
     with open('deposit.txt', 'w') as f:
         f.write(str(deposit))
-
-
 
 
 def operations_information_write(info):
@@ -85,12 +77,9 @@ def operations_information_write(info):
         f.write(str(info))
 
 
-
-
 with open('deposit.txt', 'r') as f:
     deposit_amount = Decimal(f.read())
     print(f'Ваш баланс {deposit_amount}')
-
 
 
 while flag:
